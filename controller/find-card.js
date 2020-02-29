@@ -1,5 +1,3 @@
-const getAbsoluteValue = (number) => (number ^ (number >> 31)) - (number >> 31);
-
 const sort = (a,b) => a - b;
 
 const findCard = ( { input_1 , input_2 , find } ) => {
@@ -20,7 +18,7 @@ const findCard = ( { input_1 , input_2 , find } ) => {
     let index_1  , index_2;
 
     while(a < x && b >= 0) {
-        diff = getAbsoluteValue(input_1[a] + input_2[b] - find);
+        diff = Math.abs(input_1[a] + input_2[b] - find);
         // console.log(`input ${input_1[a]} + ${input_2[b]} - ${find} = ${diff} AND MAX_VALUE ${MAX_VALUE}`);
         if(diff < MAX_VALUE){
             index_1 = a;
@@ -37,7 +35,6 @@ const findCard = ( { input_1 , input_2 , find } ) => {
 
 
 module.exports = {
-    abs : getAbsoluteValue,
     sort,
     find : findCard
 };
