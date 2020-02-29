@@ -1,0 +1,14 @@
+{
+  "name": "exam",
+  "version": "1.0.0",
+  "description": "exam FA",
+  "main": "index.js",
+  "author": "javifloresp",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^25.1.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
